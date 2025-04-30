@@ -2,7 +2,6 @@ import discord
 import requests
 from discord.ext import commands
 
-# Your bot's token
 TOKEN = 'YOUR_DISCORD_BOT_TOKEN'
 
 # Create bot instance
@@ -20,7 +19,6 @@ def get_ip_info(ip):
     except Exception as e:
         return f"Error fetching IP info: {e}"
 
-# Command to get device and IP info
 @bot.command(name='ipinfo')
 async def ipinfo(ctx):
     # Get the IP address of the sender (user who triggered the command)
@@ -35,5 +33,4 @@ async def ipinfo(ctx):
 
     await ctx.send(msg)
 
-# Start the bot
 bot.run(TOKEN)
